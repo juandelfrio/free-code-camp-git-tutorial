@@ -4,37 +4,37 @@ Based on Gwendolyn Faraday's github tutorial on Free Code Camp's YouTube channel
 
 Notes for Windows OS:
 
-A. Obtain git software
+A. Obtain git software  
   Instructions:  
-    https://aadamich.wordpress.com/articles/git/git-ssh-with-visual-studio/ 
-    https://www.atlassian.com/git/tutorials/install-git 
+    https://aadamich.wordpress.com/articles/git/git-ssh-with-visual-studio/  
+    https://www.atlassian.com/git/tutorials/install-git  
   
-  Note: During install process, select "Use Git from Git Bash Only".
-        Add git program's bin path to the Path in the System Variables list from System Properties->Environmental Variables
-        Or add GitHub extension in Visual Studio Code?  I haven't done this (8/1/2021).
+  Note: During install process, select "Use Git from Git Bash Only".  
+        Add git program's bin path to the Path in the System Variables list from System Properties->Environmental Variables  
+        Or add GitHub extension in Visual Studio Code?  I haven't done this (8/1/2021).  
+    
+B. Create and use SSH key to pull git repo from GitHub to VS Code.  
+    Intro and links to SSH key creation and use:  https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh  
+    1. In Git Bash, search for existing SSH key  
+    2. If none, open Git Bash. Create new SSH key (add to SSH agent to avoid retyping password)  
+    3. Add new SSH key to GitHub account:  
+       https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account  
+    4. In VS Code:  
+        Open folder where git repository will be pulled from GitHob.  
+        Open VS Code terminal:  
+            ***Next to "TERMINAL" ensure "bash" ("Git Bash") is selected for data type.  If default "PowerShell" is selected, different commands are used for listing files - refer to C. 1. regarding ls -la command to list all files in a folder ***  
+            In folder directory (should be there already), type  
+            git clone  
+        then from GitHib repo, in the Download/Clone options (click the green button), copy the link in "Clone with SSH" and paste it into the VS Code terminal to get:  
+            git clone git@github.com:myGithubUsername/repositoryName.git  
+        type git password if not using SSH agent.  
   
-B. Create and use SSH key to pull git repo from GitHub to VS Code.
-    Intro and links to SSH key creation and use:  https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
-    1. In Git Bash, search for existing SSH key
-    2. If none, open Git Bash. Create new SSH key (add to SSH agent to avoid retyping password)
-    3. Add new SSH key to GitHub account: 
-       https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-    4. In VS Code: 
-        Open folder where git repository will be pulled from GitHob. 
-        Open VS Code terminal: 
-            ***Next to "TERMINAL" ensure "bash" ("Git Bash") is selected for data type.  If default "PowerShell" is selected, different commands are used for listing files - refer to C. 1. regarding ls -la command to list all files in a folder ***
-            In folder directory (should be there already), type
-            git clone
-        then from GitHib repo, in the Download/Clone options (click the green button), copy the link in "Clone with SSH" and paste it into the VS Code terminal to get:
-            git clone git@github.com:myGithubUsername/repositoryName.git
-        type git password if not using SSH agent.
-  
-C. Now GitHub repo is in the designated VS Code folder
-    1. Check that the folder is a repo directory.
-        In terminal, change directory:
-            cd repositoryName
-        Then show all folders in directory (to confirm repo folder):
-            ls -la
-        Or, list everything in directory, including hidden folders.
+C. Now GitHub repo is in the designated VS Code folder  
+    1. Check that the folder is a repo directory.  
+        In terminal, change directory:  
+            cd repositoryName  
+        Then show all folders in directory (to confirm repo folder):  
+            ls -la  
+        Or, list everything in directory, including hidden folders.  
         
             
