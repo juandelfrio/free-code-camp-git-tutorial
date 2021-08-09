@@ -68,9 +68,9 @@ E. Send updated git repo folder to GitHub
      iii. In PowerShell terminal, type  
           * git commit -m "[Enter a message <= 50 characters to display in "Commit Changes" in GitHub]" -m [this 2nd -m is optional] "[Enter message with more detail that will go into the committed folder's Extended Description box]".
      iv. In PowerShell terminal, type
-         * git push origin master
+         * git push origin main
          * 'push' sends the repo to GitHub
          * 'origin' tells location of git repo
-         * 'master' is the branch to push to
+         * 'main' is the branch to push to
 
             
