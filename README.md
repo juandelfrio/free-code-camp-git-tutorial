@@ -27,21 +27,50 @@ B. Create and use SSH key to pull git repo from GitHub to VS Code
             *  git clone git@github.com:myGithubUsername/repositoryName.git  
             *  type git password if not using SSH agent.  
   
-C. Now GitHub repo is in the designated VS Code folder  
+C. Check GitHub repo in designated VS Code folder 
    1. Check that the folder is a repo directory.  
        i. In terminal, change directory:  
-          a.    cd repositoryName  
-      ii. Then show all folders in directory (to confirm repo folder):  
+          a.    cd myRepositoryName  
+      ii. Then show all folders in directory (to confirm you are in repo folder):  
           a.  ls -la  
-     iii. Or, list everything in directory, including hidden folders. 
-      iv. Update a file in the repo and create new files.
-       v. Check git's status regarding the files:  e.g. 1 modified, 1 untracked.
+          * This lists everything in directory, including hidden files.
+          * A .git file in the list confirms the folder is a git repo filder. 
+     iii. Update and create new files in the repe folder.
+      vi. Check git's status regarding the files:  
           a.  git status
-      vi. *  *** DO NOT USE THE
+          b.  The terminal will show modified and untracked files
+          *   e.g. 1 modified, 1 untracked.
+          *   Untracked files are not yet part of the repo.  
+
+D. Add and update files in git repo folder
+          *  Note that both Git Bash and PowerShell terminals can be open at the same time, and commands in both terminals execute in turn, so the following issue is not inconvenient.
+       i. *** DO NOT USE:
           *  git add
           *  command in the Git Bash terminal, or the following error occurs:
           *  "fatal: Unable to create 'C:/ ...path... /.git/index.lock': No such file or *  directory" BUT 
           *  git add 
           *  DOES WORK in the PowerShell terminal.
-        
+      ii. In PowerShell terminal, type 
+          *  git add <filename>
+          *  or, to include all the files in the folder, type
+          *  git add .
+          *  The period automatically includes everything in the git repo folder.
+     iii. Again type
+          *  git status
+          *  Check that files intended to be sent to GitHub are listed under
+          *  "Changes to be committed:"
+
+E. Send updated git repo folder to GitHub
+       i. git commit prepares selected files in the repo folder for sending to GitHub.
+      ii. *** DO NOT USE:
+          * git commit
+          * command in Git Bash terminal - refer to section D.i., above.
+     iii. In PowerShell terminal, type  
+          * git commit -m "[Enter a message <= 50 characters to display in "Commit Changes" in GitHub]" -m [this 2nd -m is optional] "[Enter message with more detail that will go into the committed folder's Extended Description box]".
+     iv. In PowerShell terminal, type
+         * git push origin master
+         * 'push' sends the repo to GitHub
+         * 'origin' tells location of git repo
+         * 'master' is the branch to push to
+
             
