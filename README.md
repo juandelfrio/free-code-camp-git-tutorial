@@ -43,31 +43,31 @@ C. Check GitHub repo in designated VS Code folder
           *   Untracked files are not yet part of the repo.  
 
 D. Add and update files in git repo folder  
-          *  Note that both Git Bash and PowerShell terminals can be open at the same time, and commands in both terminals execute in turn, so the following issue is not inconvenient.  
-       1. *** DO NOT USE:  
+          *  Note that both Git Bash and PowerShell terminals can be open at the same time, and commands in both terminals execute in turn, so the following issue is not inconvenient. 
+   1. *** DO NOT USE:  
           *  git add  
           *  command in the Git Bash terminal, or the following error occurs:  
           *  "fatal: Unable to create 'C:/ ...path... /.git/index.lock': No such file or *  directory" BUT  
           *  git add  
           *  DOES WORK in the PowerShell terminal.  
-      2. In PowerShell terminal, type  
+   2. In PowerShell terminal, type  
           *  git add <filename>  
           *  or, to include all the files in the folder, type  
           *  git add .  
           *  The period automatically includes everything in the git repo folder.  
-     iii. Again type  
+   3. Again type  
           *  git status  
           *  Check that files intended to be sent to GitHub are listed under  
           *  "Changes to be committed:"  
 
 E. Send updated git repo folder to GitHub  
-       i. git commit prepares selected files in the repo folder for sending to GitHub.  
-      ii. *** DO NOT USE:  
+   1. git commit prepares selected files in the repo folder for sending to GitHub.  
+   2. *** DO NOT USE:  
           * git commit  
           * command in Git Bash terminal - refer to section D.i., above.  
-     iii. In PowerShell terminal, type  
+   3. In PowerShell terminal, type  
           * git commit -m "[Enter a message <= 50 characters to display in "Commit Changes" in GitHub]" -m [this 2nd -m is optional] "[Enter message with more detail that will go into the committed folder's Extended Description box]".  
-     iv. In PowerShell terminal, type  
+   4. In PowerShell terminal, type  
          * git push origin main  
          * 'push' sends the repo to GitHub  
          * 'origin' tells location of git repo  
