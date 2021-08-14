@@ -63,10 +63,10 @@ D. Add and update files in git repo folder
 E. Send updated git repo folder to GitHub  
    1. git commit prepares selected files in the repo folder for sending to GitHub.  
    2. *** DO NOT USE:  
-          * git commit  
-          * command in Git Bash terminal - refer to section D.i., above.  
+         * git commit  
+         * command in Git Bash terminal - refer to section D.i., above.  
    3. In PowerShell terminal, type  
-          * git commit -m "[Enter a message <= 50 characters to display in "Commit Changes" in GitHub]" -m [this 2nd -m is optional] "[Enter message with more detail that will go into the committed folder's Extended Description box]".  
+         * git commit -m "[Enter a message <= 50 characters to display in "Commit Changes" in GitHub]" -m [this 2nd -m is optional] "[Enter message with more detail that will go into the committed folder's Extended Description box]".  
    4. In PowerShell terminal, type  
          * git push origin main  
          * 'push' sends the repo to GitHub  
