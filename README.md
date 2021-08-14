@@ -56,9 +56,9 @@ D. Add and update files in git repo folder
           *  git add .  
           *  The period automatically includes everything in the git repo folder.  
    3. Again type  
-          *  git status  
+       *  git status  
           *  Check that files intended to be sent to GitHub are listed under  
-          *  "Changes to be committed:"  
+        *  "Changes to be committed:"  
 
 E. Send updated git repo folder to GitHub  
    1. git commit prepares selected files in the repo folder for sending to GitHub.  
